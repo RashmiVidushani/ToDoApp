@@ -39,7 +39,8 @@ const App = () => {
       <Text style={styles.header}>To-Do Application</Text>
       
       <TaskInput onAddTask={addTask} />
-      <Text style={styles.subTitle}>Task List</Text>
+      <Text style={styles.subTitle}>Task List ({tasks.length})</Text>
+      <View style={styles.tasksListContainer}>
       <FlatList
         data={tasks}
         keyExtractor={(item) => item.id}
@@ -51,10 +52,7 @@ const App = () => {
           />
         )}
       />
-      <View style={styles.footerContainer}>
-        <Text style={styles.taskCount}>Total Tasks: {tasks.length}</Text>
-      </View>
-      
+      </View>  
     </View>
   );
 };
@@ -77,15 +75,11 @@ const styles = StyleSheet.create({
     fontSize: 16,
     margin: 10,
   },
-  footerContainer: {
+  tasksListContainer:{
+    marginBottom: 50,
     padding: 10,
-    alignItems: "center",
-  },
-  footer: {
-    color: "gray",
-    fontSize: 14,
-    textAlign: "center",
-  },
+    borderRadius: 10,
+  }
 });
 
 export default App;
