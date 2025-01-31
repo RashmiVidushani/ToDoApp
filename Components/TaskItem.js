@@ -5,9 +5,10 @@ import { Icon } from "react-native-elements";
 const TaskItem = ({ task, onToggleStatus, onDeleteTask }) => {
   return (
     <View style={styles.taskContainer}>
-      <Text style={[styles.taskTitle, task.status === "done" && styles.completed]}>
-        {task.title}
-      </Text>
+      <View style={styles.TaskItemContainer}>
+        <Text style={styles.taskTitle}>{task.title}</Text>
+        <Text style={[styles.statusDesc, task.status === "done" && styles.completed || styles.due]}>Status : {task.status}</Text>
+      </View>
       <Switch
         value={task.status === "done"}
         onValueChange={() => onToggleStatus(task.id)}
@@ -15,7 +16,7 @@ const TaskItem = ({ task, onToggleStatus, onDeleteTask }) => {
         trackColor={{ false: "#f5a49d", true: "#a2e8b4" }}
       />
       <TouchableOpacity onPress={() => onDeleteTask(task.id)}>
-        <Icon name="delete" color="red" />
+        <Icon name="delete" color="#FF7043" />
       </TouchableOpacity>
     </View>
   );
@@ -25,7 +26,6 @@ const styles = StyleSheet.create({
   taskContainer: {
     flexDirection: "row",
     alignItems: "center",
-    justifyContent: "space-between",
     borderColor: "#cccccc",
     borderWidth: 1,
     borderStyle: "solid",
@@ -38,11 +38,24 @@ const styles = StyleSheet.create({
     elevation: 1,
   },
   taskTitle: {
+    textTransform: "capitalize",
     flex: 1,
     fontSize: 16,
   },
   completed: {
     color: "green",
+  },
+  statusDesc: {
+    fontSize: 12,
+    color: "#666",
+    textTransform: "capitalize",
+  },
+  due: {
+    color: "red",
+  },
+  TaskItemContainer: {
+    margin: 5,
+    flex: 1,
   },
 });
 

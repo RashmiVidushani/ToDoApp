@@ -37,7 +37,9 @@ const App = () => {
           barStyle={statusBarStyle}
         />
       <Text style={styles.header}>To-Do Application</Text>
+      
       <TaskInput onAddTask={addTask} />
+      <Text style={styles.subTitle}>Task List</Text>
       <FlatList
         data={tasks}
         keyExtractor={(item) => item.id}
@@ -51,7 +53,6 @@ const App = () => {
       />
       <View style={styles.footerContainer}>
         <Text style={styles.taskCount}>Total Tasks: {tasks.length}</Text>
-        <Text style={styles.footer}>Created by: Rashmi Vidushani</Text>
       </View>
       
     </View>
@@ -66,16 +67,18 @@ const styles = StyleSheet.create({
   },
   header: {
     color: "#FF7043",
-    fontSize: 16,
+    fontSize: 20,
+    fontWeight: "bold",
     marginBottom: 20,
     textAlign: "center",
   },
+  subTitle: {
+    color: "#FF7043",
+    fontSize: 16,
+    margin: 10,
+  },
   footerContainer: {
     padding: 10,
-    borderColor: "#FF7043",
-    borderWidth: 1,
-    borderStyle: "solid",
-    backgroundColor: "#F9F9F9",
     alignItems: "center",
   },
   footer: {
