@@ -1,16 +1,55 @@
-to-do application.
+# ✅ To-Do Application
 
-1. Add a task with Title and Status.
-2. Toggle tatus will be 'due' as default. The possible statuses are 'due' or 'done'.
-3. EDIT the STATUS attributes from the task Item on the list itself.
-4. DELETE the selected task from the list directly by clicking on the delete icon.
-6. Disabled ADD TASK button when the input field is empty.
-7. Colorful UI/UX with the use of appropriate components to accept input from the user and display proper output.
+A clean, colorful, and interactive To-Do List application built to help users manage their daily tasks with ease. This app allows users to create, edit, toggle, and delete tasks in real-time with an intuitive UI/UX.
+
+![Made with JavaScript](https://img.shields.io/badge/Made%20with-JavaScript-yellow?style=for-the-badge)
+![MIT License](https://img.shields.io/badge/license-MIT-blue?style=for-the-badge)
+
+---
+
+## 📌 Features
+
+- 📝 Add a task with a **title** and default status `'due'`
+- 🔄 Toggle task status between **`due`** and **`done`**
+- ✏️ Edit task **status** inline directly in the list
+- 🗑️ **Delete** tasks with one click
+- 🚫 **"Add Task" button is disabled** when input is empty
+- 🎨 **Colorful UI/UX** for smooth interaction and visual clarity
+- 📊 **Task count status bar** displays total, due, and completed tasks
+- 👤 **Developer info** and credits section included
+
+---
+
+## 🧪 Screenshots
 
 
-Additional Developments : 
-            Task Count
-            Status bar
-            Developer details
+> ![Screenshot - Dashboard](screenshots/dashboard.png)
+> ![Screenshot - Add Task](screenshots/add-task.png)
+
+---
+
+## 🛠️ Tech Stack
+
+- **HTML5**
+- **CSS3**
+- **JavaScript (ES6+)**
+- Bootstrap or custom CSS components (based on your implementation)
+
+---
+
+## 🚀 Getting Started
+
+### 🔧 Installation
+
+```bash
+# Clone the repository
+git clone https://github.com/yourusername/todo-app.git
+
+# Navigate to the project directory
+cd todo-app
+
+# Open with Live Server or any browser of your choice
+
+
             
   
